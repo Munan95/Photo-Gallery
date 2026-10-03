@@ -3,16 +3,16 @@ const navLinks = ['Home', 'About', 'Contact']
 export default function Header({ query, setQuery, dark, setDark }) {
   return (
     <header className="sticky top-0 z-20 border-b border-gray-100 bg-white dark:border-white dark:bg-black">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3">
+      <div className="mx-auto flex w-full max-w-[1700px] flex-wrap items-center gap-x-3 gap-y-3 px-6 py-3">
         {/* Logo */}
-        <a href="#" className="flex items-center text-xl font-extrabold uppercase tracking-wider">
+        <a href="#" className="flex items-center text-3xl font-extrabold uppercase tracking-wider pr-15">
           Phot
-          <span className="mx-0.5 inline-block h-4 w-4 rounded-full bg-black dark:bg-white" />
+          <span className="mx-0.5 inline-block h-7 w-7 rounded-full bg-black dark:bg-white" />
           Gallery
         </a>
 
         {/* Nav links */}
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-6 text-base font-medium md:flex">
           {navLinks.map((link) => (
             <a
               key={link}

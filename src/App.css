@@ -2,3 +2,7 @@
 
 /* Enable class-based dark mode: <html class="dark"> */
 @custom-variant dark (&:where(.dark, .dark *));
+
+.font-nosifer {
+  font-family: "Nosifer", cursive;
+}
