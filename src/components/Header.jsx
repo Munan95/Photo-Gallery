@@ -2,7 +2,7 @@ const navLinks = ['Home', 'About', 'Contact']
 
 export default function Header({ query, setQuery, dark, setDark }) {
   return (
-    <header className="sticky top-0 z-20 border-b border-black bg-white dark:border-white dark:bg-black">
+    <header className="sticky top-0 z-20 border-b border-gray-100 bg-white dark:border-white dark:bg-black">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3">
         {/* Logo */}
         <a href="#" className="flex items-center text-xl font-extrabold uppercase tracking-wider">
@@ -32,12 +32,12 @@ export default function Header({ query, setQuery, dark, setDark }) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search"
             aria-label="Search photos"
-            className="min-w-0 flex-1 rounded-full border border-black bg-white px-4 py-2 text-sm text-black placeholder-neutral-500 outline-none focus:ring-2 focus:ring-black sm:w-56 sm:flex-none dark:border-white dark:bg-black dark:text-white dark:focus:ring-white"
+            className="min-w-0 flex-1 rounded-full border border-gray-400 bg-white px-4 py-2 text-sm text-black placeholder-neutral-500 outline-none focus:ring-1 focus:ring-gray-600 sm:w-56 sm:flex-none dark:border-white dark:bg-black dark:text-white dark:focus:ring-white"
           />
           <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle dark mode"
-            className="rounded-full border border-black px-3 py-2 text-sm hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+            className="rounded-full border border-gray-400 px-3 py-2 text-sm hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
           >
             {dark ? '☀ Light' : '☾ Dark'}
           </button>
