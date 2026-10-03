@@ -5,7 +5,7 @@ export const getImageUrl = (photo, size = 400) =>
 
 export default function PhotoCard({ photo, onView }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-black/20 bg-white transition duration-200 hover:-translate-y-1 hover:border-black hover:shadow-xl dark:border-white/25 dark:bg-black dark:hover:border-white dark:hover:shadow-white/10">
+    <article className="flex flex-col overflow-hidden rounded-xl border border-black/20 bg-white transition duration-200 hover:-translate-y-1 hover:border-gray-400 hover:shadow-xl dark:border-white/25 dark:bg-black dark:hover:border-white dark:hover:shadow-white/10">
       <img
         src={getImageUrl(photo)}
         alt={photo.title}
@@ -14,10 +14,10 @@ export default function PhotoCard({ photo, onView }) {
       />
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex flex-wrap gap-2 text-xs font-semibold">
-          <span className="rounded-full border border-black px-2.5 py-1 dark:border-white">
+          <span className="rounded-full border border-gray-400 px-2.5 py-1 dark:border-white">
             Photo ID: {photo.id}
           </span>
-          <span className="rounded-full border border-black px-2.5 py-1 dark:border-white">
+          <span className="rounded-full border border-gray-400 px-2.5 py-1 dark:border-white">
             Album ID: {photo.albumId}
           </span>
         </div>

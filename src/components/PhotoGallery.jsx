@@ -58,7 +58,7 @@ export default function PhotoGallery({ query }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center gap-3 py-20">
-        <span className="h-6 w-6 animate-spin rounded-full border-4 border-neutral-300 border-t-black dark:border-neutral-700 dark:border-t-white" />
+        <span className="h-6 w-6 animate-spin rounded-full border-4 border-neutral-300 border-t-gray-400 dark:border-neutral-700 dark:border-t-white" />
         Loading photos…
       </div>
     )
@@ -66,7 +66,7 @@ export default function PhotoGallery({ query }) {
 
   if (error) {
     return (
-      <p className="rounded-lg border border-black p-4 text-center dark:border-white">
+      <p className="rounded-lg border border-gray-400 p-4 text-center dark:border-white">
         Could not load photos: {error}
       </p>
     )
@@ -84,7 +84,7 @@ export default function PhotoGallery({ query }) {
           <select
             value={album}
             onChange={(e) => setAlbum(e.target.value)}
-            className="rounded-lg border border-black bg-white px-3 py-2 text-black dark:border-white dark:bg-black dark:text-white"
+            className="rounded-lg border border-gray-400 bg-white px-3 py-2 text-black focus:border-gray-400 focus:ring-0 dark:border-white dark:bg-black dark:text-white"
           >
             <option value="all">All albums</option>
             {albums.map((a) => (
